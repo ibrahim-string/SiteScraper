@@ -31,9 +31,9 @@ import SiteScraper as ss
 import SiteScraper as ss
 import pandas as pd 
 df = ss.yt_vedio()
-new_data = df.yt_vedios_data('https://www.youtube.com/@campusx-official/videos')
+new_data = df.yt_vedios_data('https://www.youtube.com/@xxxxxxxxxxx')
 dataframe = pd.DataFrame(new_data)
-dataframe.to_csv('campusx.csv', index=False)
+dataframe.to_csv('xxxxx.csv', index=False)
 
 ```
 
@@ -59,9 +59,9 @@ dataframe.to_csv('youtube_comments.csv', index=False)
 import SiteScraper as ss
 import pandas as pd 
 d=ss.yt_vedio()
-data=d.yt_vedio_links('https://www.youtube.com/@campusx-official/videos')
+data=d.yt_vedio_links('https://www.youtube.com/xxxxxxx')
 df=pd.DataFrame(data)
-df.to_csv('links.csv',index=False)
+df.to_csv('xxxx.csv',index=False)
 
 
 ```
