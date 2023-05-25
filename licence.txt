@@ -1,0 +1,5 @@
+This module is open source and freely available for anyone to use and contribute to. There are no restrictions on the use of this module, and we encourage everyone to take advantage of its features and capabilities.
+
+As the creator of this module, Ibrahim welcomes contributions from the community to help improve and expand its functionality. Whether you are a developer, a data scientist, or just someone who is passionate about technology, you are invited to contribute to this project and help make it even better.
+
+Thank you for your interest in this module, and we look forward to seeing what you can create with it.
