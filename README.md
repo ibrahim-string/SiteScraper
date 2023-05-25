@@ -69,7 +69,7 @@ df.to_csv('xxxx.csv',index=False)
 
 Note that you will need to replace the URL with the actual YouTube URL that you want to scrape.
 New methods will be commited for twitter and reddit 
-#  Note this is for running SiteScraper in google colab : 
+#  Note:  This is for running SiteScraper in google colab : 
 ```
 
 #run this command in the cell 
