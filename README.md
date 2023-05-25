@@ -2,11 +2,15 @@
 
 This repository contains the following methods:
 
-## 'yt_vedio()'
+## yt_vedio_data()
 This method uses Selenium and Firefox web driver to scrape YouTube videos' title, views, and upload time from a given URL. It returns a dictionary with keys 'title', 'views', and 'when', and corresponding values.
 
-## 'yt_vedio_comment()'
+## yt_vedio_comment()
 This method uses Selenium and Firefox web driver to scrape YouTube comments' text, likes, and time posted from a given URL. It returns a Pandas DataFrame with columns 'comment_text', 'likes', and 'comment_time', and corresponding values.
+
+## yt_vedio_links()
+This method uses selenium and chrome web driver to scrape out links from youtube. The url should be passed as an argument. The method returns a list.
+
 
 To use these methods, you will need to have Python 3 installed, along with the following libraries: pandas, selenium, and geckodriver-autoinstaller.
 
@@ -21,7 +25,7 @@ To run the methods, you will need to import the SiteScraper module and create an
 
 import SiteScraper as ss
 
-# create an instance of yt_vedio class
+# Example code to extract vedio data like likes title and the date when it was posted.
 ```
 
 import SiteScraper as ss
@@ -33,20 +37,34 @@ dataframe.to_csv('campusx.csv', index=False)
 
 ```
 
-# create an instance of yt_vedio_comment class
+# Example code to extract comments from a given youtube vedio.
 
 
 ```
 
 import SiteScraper as ss
 import pandas as pd 
-df = ss.yt_vedio_comment()
+df = ss.yt_vedio()
 new_data = df.yt_vedio_comment('https://www.youtube.com/watch?v=xxxxxxxx')
 dataframe = pd.DataFrame(new_data)
 dataframe.to_csv('youtube_comments.csv', index=False)
 
 ```
+# Example code to extract links of all the vedios posted on youtube.
 
+
+```
+
+
+import SiteScraper as ss
+import pandas as pd 
+d=ss.yt_vedio()
+data=d.yt_vedio_links('https://www.youtube.com/@campusx-official/videos')
+df=pd.DataFrame(data)
+df.to_csv('links.csv',index=False)
+
+
+```
 
 
 Note that you will need to replace the URL with the actual YouTube URL that you want to scrape.
