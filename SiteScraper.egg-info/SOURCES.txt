@@ -1,0 +1,12 @@
+README.md
+licence.txt
+setup.cfg
+setup.py
+SiteScraper/SiteScraper.py
+SiteScraper/__init__.py
+SiteScraper.egg-info/PKG-INFO
+SiteScraper.egg-info/SOURCES.txt
+SiteScraper.egg-info/dependency_links.txt
+SiteScraper.egg-info/not-zip-safe
+SiteScraper.egg-info/requires.txt
+SiteScraper.egg-info/top_level.txt
