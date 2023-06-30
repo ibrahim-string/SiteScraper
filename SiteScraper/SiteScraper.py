@@ -26,11 +26,9 @@ class yt_vedio():
     def yt_vedios_data(self, url,browser='Chrome',abort=bool):
         if browser=='Chrome' or browser=='chrome':
             driver = self.web_driver_chrome()
-           
             self.url = url
             try:
                 driver.get(self.url)
-                
                 prev_h = 0
                 videos = driver.find_elements(By.XPATH, '//*[@id="contents"]')
                 counter=0
@@ -55,7 +53,6 @@ class yt_vedio():
                             else:
                                 counter=0
                 videos = driver.find_elements(By.XPATH, '//*[@id="contents"]')
-
                 title = list()
                 views = list()
                 when = list()
@@ -74,13 +71,11 @@ class yt_vedio():
             except:
                 driver.quit()
                 logging.error("Invalid url")
-            
         else:
             driver =self.web_driver_firefox()
             self.url = url
             try:
                 driver.get(self.url)
-                
                 prev_h = 0
                 counter=0
                 while True:
@@ -113,8 +108,6 @@ class yt_vedio():
                         By.XPATH, './/*[@id="metadata-line"]/span[1]').text)
                     when .append(vedio.find_element(
                         By.XPATH, './/*[@id="metadata-line"]/span[2]').text)
-                    
-
                 list_of_dic = {'title': title, 'views': views, 'when': when}
                 
                 driver.quit()
@@ -158,7 +151,6 @@ class yt_vedio():
                 for element in comment_time:
                     time_posted.append(element.text)
                 dic={'comment_text':txt,'likes':likes,'comment_time':time_posted}
-                
                 driver.quit()
                 return dic
 
@@ -199,7 +191,7 @@ class yt_vedio():
                 comment_time=driver.find_elements(By.XPATH,'//*[@id="header-author"]/yt-formatted-string/a')
                 for element in comment_time:
                     time_posted.append(element.text)
-                dic={'comment_text':txt,'likes':likes,'comment_time':time_posted}
+                dic={'comment_text':txt,'likes':likes,'comment_posting_time':time_posted}
                 
                 driver.quit()
                 return dic
