@@ -46,7 +46,7 @@ class yt_vedio():
                     if prev_h >= height:
                         break
                     if abort==True:
-                        if counter>=15:
+                        if counter>=100:
                             abortinput=input("Do you want to abort? press [y] for yes. ")
                             if abortinput=="y" or abortinput=="Y":
                                 break
@@ -92,7 +92,7 @@ class yt_vedio():
                     if prev_h >= height:
                         break
                     if abort==True:
-                        if counter>=15:
+                        if counter>=100:
                             abortinput=input("Do you want to stop? press [y] for yes. ")
                             if abortinput=="y" or abortinput=="Y":
                                 break
