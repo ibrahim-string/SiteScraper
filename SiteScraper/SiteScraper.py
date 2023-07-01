@@ -199,7 +199,7 @@ class yt_vedio():
             except:
                 driver.quit()
                 logging.error('Invalid url')
-    def yt_vedio_links(self,url):
+    def yt_vedio_links(self,url,abort=bool):
         try:
             driver =self.web_driver_chrome()
             self.url = url
@@ -207,16 +207,20 @@ class yt_vedio():
             time.sleep(5)
             prev_h = 0
             prev_h = driver.execute_script("return document.documentElement.scrollHeight;")
+            counter=0
             while True:
                 # Scrolling to the bottom
                 driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
                 time.sleep(3)
 
-               
+                counter=counter+1
                 new_height = driver.execute_script("return document.documentElement.scrollHeight;")
                 if new_height == prev_h:
                     break
                 prev_h = new_height
+                if abort==True:
+                    if counter>135:
+                        break
 
             
             links = driver.find_elements(By.XPATH, '//*[@id="video-title-link"]')
