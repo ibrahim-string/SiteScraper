@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='SiteScraper',
-    version='2.2.1',
+    version='2.3.1',
     description='Scraping high intensity content sites',
     author='Ibrahim',
     author_email='string2025@gmail.com',

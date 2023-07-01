@@ -219,8 +219,12 @@ class yt_vedio():
                     break
                 prev_h = new_height
                 if abort==True:
-                    if counter>135:
-                        break
+                        if counter>=100:
+                            abortinput=input("Do you want to stop? press [y] for yes. ")
+                            if abortinput=="y" or abortinput=="Y":
+                                break
+                            else:
+                                counter=0
 
             
             links = driver.find_elements(By.XPATH, '//*[@id="video-title-link"]')
